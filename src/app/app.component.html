@@ -1,0 +1,33 @@
+<div [class.dark-mode]="isDarkMode">
+  <!-- Botones -->
+  <div class="botones">
+    <app-btn-primario (click)="onPrimaryClick()"></app-btn-primario>
+    <app-btn-secundario (click)="onSecondaryClick()"></app-btn-secundario>
+    <app-btn-aceptar (clickAceptar)="onAcceptClick()"></app-btn-aceptar>
+    <app-btn-cancelar (click)="onCancelClick()"></app-btn-cancelar>
+    <app-btn-mdoscuro (click)="toggleDarkMode()"></app-btn-mdoscuro>
+  </div>
+
+  <div class="contenido">
+    <!-- Inputs -->
+    <div class="inputs">
+      <input type="email" [(ngModel)]="email" placeholder="Ingrese su correo" />
+      <input
+        type="password"
+        [(ngModel)]="contrasenia"
+        placeholder="Ingrese su contraseña"
+      />
+      <input type="text" [(ngModel)]="texto" placeholder="Ingrese texto" />
+    </div>
+
+    <!-- Visualizador -->
+    <div class="visualizador">
+      <p><strong>Email:</strong> {{ visualizadorEmail }}</p>
+      <p><strong>Contraseña:</strong> {{ visualizadorContrasenia }}</p>
+      <p><strong>Texto:</strong> {{ visualizadorTexto }}</p>
+      <p>{{ visualizador }}</p>
+    </div>
+  </div>
+</div>
+
+

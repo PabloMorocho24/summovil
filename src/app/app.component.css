@@ -1,0 +1,141 @@
+/* Estilos generales para la página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Estilo para el contenido */
+.contenido {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo general para el modo oscuro */
+.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+/* Estilo para los inputs en caso de que el correo no sea válido */
+.invalid {
+  border-color: red;
+  background-color: #ffe6e6;
+}
+
+/* Estilos para el visualizador */
+.visualizador {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* Estilos generales para los inputs */
+input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Estilos para el botón aceptar */
+button.btn-aceptar {
+  background-color: #28a745;
+}
+
+/* Estilos para el botón cancelar */
+button.btn-cancelar {
+  background-color: #dc3545;
+}
+
+/* Estilos para el botón primario */
+button.btn-primario {
+  background-color: #007bff;
+}
+
+/* Estilos para el botón secundario */
+button.btn-secundario {
+  background-color: #6c757d;
+}
+
+/* Estilos para el botón de modo oscuro */
+button.btn-mdoscuro {
+  background-color: #212529;
+  color: #fff;
+}
+
+/* Estilo adicional para el modo oscuro (aplicado a toda la página) */
+.dark-mode body {
+  background-color: #333;
+  color: white;
+}
+
+.dark-mode .botones {
+  background-color: #444;
+  color: white;
+}
+
+.dark-mode .inputs input {
+  background-color: #555;
+  color: white;
+  border: 1px solid #777;
+}
+
+.dark-mode .visualizador {
+  background-color: #444;
+  color: white;
+  border: 1px solid #777;
+}
+
+/* Estilo para los switch buttons */
+.switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.switch input {
+  position: absolute;
+  opacity: 0;
+}
+
+.switch .slider {
+  position: relative;
+  width: 34px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: background-color 0.3s ease;
+}
+
+.switch .slider:before {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: white;
+  left: 4px;
+  top: 4px;
+  transition: transform 0.3s ease;
+}
+
+.switch input:checked + .slider {
+  background-color: #2196F3;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(14px);
+}
